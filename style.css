@@ -16,6 +16,9 @@ h1{
 }
 
 [class*="header"] {
+    border: 2px solid rgba(0, 0, 0, 0.205);
+    margin: auto;
+    text-align: left;
     font-size: 22px; /* Adjust the font size as needed */
     font-weight: bold;
 }
