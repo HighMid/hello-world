@@ -79,11 +79,15 @@ function teamunits(team){
     let numberOfUnits = parseInt(prompt("How many units (images) do you want for the " + team + " team? (Choose a number between 1 and 8)"), 10);
 
     // Check if the entered value is within the desired range
+    while(true){
     if (isNaN(numberOfUnits) || numberOfUnits < 1 || numberOfUnits > 8) {
-        alert("Please enter a valid number between 1 and 8!");
-        return;
-    }
+        numberOfUnits = parseInt(prompt("Uhh look I said between 1 and 8, I'm too lazy to kick you out so I'll keep you here until you get it right."));
+                
+    }else{
 
+        break;
+    }
+}
     let unitContainer = document.getElementById(team + "-units");
     unitContainer.innerHTML = ""; // Clear previous units
 
