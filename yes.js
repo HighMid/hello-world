@@ -20,7 +20,7 @@ function username()
     }
     console.log("User name = " + user);
 
-    alert('Oh nice to meet you, ' + user + '.');
+    alert('Ok, nice to meet you, ' + user + '.');
     console.log("Let's send this back to main. " + user);
 
     return user;
