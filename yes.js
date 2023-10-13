@@ -30,13 +30,18 @@ function username()
 function chooseteam(name)
 {
     let count = 0;
+    let fLetter;
     alert("Hey " + name + " so we have a bit of a situation here...");
 
     while(true){
-
         
         let team = prompt("These three teams...which one would you join...?");
-        let fLetter = team.charAt(0).toLowerCase();
+        if (team !== null && team !== ''){
+            fLetter = team.charAt(0).toLowerCase();
+        }else{
+            fLetter = '';
+        }
+        
 
         switch (fLetter){
 
@@ -59,22 +64,48 @@ function chooseteam(name)
                 return team;
 
             default:
+
                 if (count > 0){
-                    alert("Well I think BLUE fits you fine! I mean look at him!")
-                    alert("WELCOME TO BLUE TEAM !")
-                    team = 'blue';
-                    return team;
+                    
+                    let random = RNG(1 , 3);
+                    switch (random){
+
+                        case 1:
+
+                            alert("Well I knew you were up to no good so Yellow it is . . .")
+                            alert("WELCOME TO YELLOW TEAM !")
+                            team = 'yellow';
+                            return team; 
+
+                        case 2:
+
+                            alert("Cmon man why couldn't you just say you LOVE red team !")
+                            alert("WELCOME TO RED TEAM !")
+                            team = 'red';
+                            return team; 
+                        
+                        case 3:
+
+                            alert("Well I think BLUE fits you fine! I mean look at him!")
+                            alert("WELCOME TO BLUE TEAM !")
+                            team = 'blue';
+                            return team;
+                    }
+                    
 
                 }
+
                 alert("You know, I think you're a part of the secret team that no one can see. =)");
                 alert("BUT, I need one of these teams (Y/R/B)! I'll just randomly assign you next time.")
+                console.log(count);
                 count++;
                 
         }
     }
 }
 
-function teamunits(team){
+function teamunits(team)
+{
 
     let numberOfUnits = parseInt(prompt("How many units (images) do you want for the " + team + " team? (Choose a number between 1 and 8)"), 10);
 
@@ -99,6 +130,15 @@ function teamunits(team){
         unitContainer.appendChild(unitImg);
     }
 }
+
+function RNG(min, max) //  Generates a number between 1 and 3, including both. Because who doesn't love randomness!
+{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(RNG(1, 3));  //  Generates a number between 1 and 3, including both. Because who doesn't love randomness!
 
 // function teamunitsproto(team)
 // {
