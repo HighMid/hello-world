@@ -2,23 +2,45 @@ body{
     background-color:beige;
 }
 
-h1{
+h1 {
+    width: 70%;  /* Example width, adjust as needed */
+    margin: 20px auto; /* Top and bottom margin set to 20px, left and right set to auto */
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px 5px rgb(184, 165, 165);
+    text-align: center;  /* To ensure the text inside is centered as well */
+    
+}
+
+
+/* h1{
     float: center;
     margin-left: 20px;
     margin-right: 50px;
     color: rgb(0, 0, 0);
     text-shadow: 5px 5px 5px rgb(184, 165, 165);
-}
+} */
+
 /* CSS styles for image dimensions */
 .image-container img {
-    width: 290px;
-    height: 220px;
+    margin: 20px auto;  /* top and bottom margin is 20px, left and right margin is auto */
+    width: 320px;
+    height: 240px;
+    display: block; /* This is crucial for the auto margins to work on inline elements like img */
 }
+
+.above-section {
+    background-color: rgba(121, 226, 22, 0.479);  /* Replace #YOUR_COLOR with your preferred color */
+    padding: 60px;      /* Provides some space inside the section, adjust as needed */
+    margin-bottom: 25px; /* Provides some space below the section before the team sections */
+    text-align: center; /* Optionally, to center any text or content inside */
+}
+
 
 [class*="header"] {
     border: 2px solid rgba(0, 0, 0, 0.205);
+    margin-top: 0px;
     margin: auto;
-    text-align: left;
+    text-align: center;
     font-size: 22px; /* Adjust the font size as needed */
     font-weight: bold;
 }
@@ -32,4 +54,31 @@ h1{
 }
 .blueteamheader{
     color:rgb(12, 26, 223); /* Set color for blue team */
+}
+
+section {
+    display: inline-block;
+    width: 30%;
+    margin-right: 10px;
+    flex: 1;              /* Makes each section take equal width */
+    margin: 0 10px;       /* Gives a little space on the left and right side of each section */
+}
+
+.teams-wrapper {
+    display: flex;        /* Turns on Flexbox */
+    justify-content: space-between; /* This will evenly space your sections */
+    max-width: 95%;       /* This restricts the width, adjust as needed */
+    margin: 0 auto;       /* This centers your wrapper on the page */
+}
+
+.team-units {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.team-unit-image {
+    width: 50px;  
+    height: 50px; 
 }

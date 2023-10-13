@@ -5,19 +5,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Fruit TEAMS</h1>
     <nav>
         <header>
-            <h1>Fruit TEAMS</h1>
+            <a href="https://qilinxie02.github.io/lab5new/index.html">Qilin's Github</a>
         </header>
 
-        <a href="https://qilinxie02.github.io/lab5new/index.html">Qilin's Github</a>
-        
+        <div class="above-section">
+            Content or elements you want in the section
+        </div>
+
+    <div class="teams-wrapper">
         <section>
             <p class="yellowteamheader">Yellow Team ! ! !</p>
             <p class="image-container">
                 <img src="yellowteam.png" alt="Image 1">
             </p>
             <p class="yellowteamheader">Stuff about yellow team.</p>
+            <div class="team-units" id="yellow-units"></div>
         </section>
 
         <section>
@@ -26,6 +31,7 @@
                 <img src="redteam.png" alt="Image 2">
             </p>
             <p class="redteamheader">Stuff about red team.</p>
+            <div class="team-units" id="red-units"></div>
         </section>
         
         <section>
@@ -34,8 +40,9 @@
                 <img src="blueteam.png" alt="Image 3">
             </p>
             <p class="blueteamheader">Stuff about blue team.</p>
+            <div class="team-units" id="blue-units"></div>
         </section>
-
+    </div>
 
     </nav>
 </body>
@@ -44,6 +51,7 @@
 
 <script>
     let user = username();
-    let team = chooseteam();
+    let team = chooseteam(user);
+    teamunits(team);
 </script>
 </html>
