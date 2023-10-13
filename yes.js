@@ -1,6 +1,13 @@
 'use strict';
 
-alert('Sorry for annoying you. . .');
+document.addEventListener("DOMContentLoaded", function() {
+    alert('Sorry for annoying you. . .');
+    let user = username();
+    let team = chooseteam(user);
+    teamunits(team);
+
+});
+
 
 function username()
 {
@@ -140,9 +147,6 @@ function RNG(min, max) //  Generates a number between 1 and 3, including both. B
 
 console.log(RNG(1, 3));  //  Generates a number between 1 and 3, including both. Because who doesn't love randomness!
 
-setTimeout(function() {
-    console.log("This will be logged after 2 seconds!");
-}, 2000); // 2000 milliseconds = 2 seconds
 
 // function teamunitsproto(team)
 // {
