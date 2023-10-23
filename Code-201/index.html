@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="style.css"-->
+    <title>Document </title>
+    <style>
+        .header{
+            background-color: bisque;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header>Class 1 Lab</header>    
+    <main>
+        <h1 class="header">Hello yet again FRIENDS! ! !</h1>
+        <P style ="background-color: black; color:white">What's your name?</P>
+        <P style ="background-color: yellow; color:black">Do you like Games?</P>
+        <P style ="background-color: darkolivegreen; color:aqua">Got a favorite color?</P>
+        <P style ="background-color: sienna; color:yellow">Finally do you like cats or dogs?</P>
+    </main>
+    <footer></footer>
+    
+
+</body>
+<script>
+
+    let name = "", likeGames, color, animalOption;
+
+    alert("Hello again friend . . .");
+
+    name = prompt("What is your name?");
+
+    if (name == "" || name == null){
+
+        alert("Not this again . . .");
+        console.log("Oh no this person is nameless . . . not again.");
+
+        name = prompt("Look I don't mind a fake name but just give a name nonetheless!");
+        console.log("Let's give them another chance.");
+
+        if (name == "" || name == null){
+
+            name = "Bames"
+            alert("Ok I'll just call you Bames Jond.");
+            console.log("Well I guess they'll be known as " + name + " for the time being.")
+        }
+    }
+
+    alert("Nice to meet you " + name + " !");
+
+    likeGames = prompt("Hey " + name + " do you like games? (Yes/No)");
+    likeGames = likeGames.charAt(0).toLowerCase();
+    if (likeGames == 'y'){
+
+        alert("Oh hell yeah, I do some Gamin' myself.");
+        console.log("Liking Game's is pretty cool so that's nice.");
+
+    }else{
+        alert("Understandable, I too dislike it when people ask me.");
+        console.log("Well not everyone does the gaming.");
+    }
+
+    color = prompt("What about a favorite color?");
+
+    alert("Whether " + color + " is a real color or not, just know that mine is blue friend.");
+    console.log(color + "is indeed a color to someone in the world.");
+
+    animalOption = prompt("Between cats or dogs which one do you like more?");
+    animalOption = animalOption.charAt(0).toLowerCase();    
+    console.log("Choice was "+ animalOption);
+
+    switch (animalOption){
+
+    case 'c':
+
+        alert("Yeah cat's are pretty cool if I do say so myself " + name + ".");
+        break;
+
+    case 'd':
+
+        alert("I haven't owned a dog in a long time but they make the funniest faces.");
+        break;
+
+    case 'b':
+
+        alert("Ok well dang alright you like them both! Understandable.");
+        break;
+    
+    default:
+        
+        alert("Well " + name + " you seem like a person who would like Birds so I guess that's ok.");
+        break;
+}
+</script>
+</html>
